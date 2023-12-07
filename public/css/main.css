@@ -51,6 +51,10 @@ button {
   border: none;
   padding-block: 0;
 }
+.d-b{
+  display: none;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -94,7 +98,7 @@ header {
 }
 
 .logo {
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
 }
 
 header nav {
@@ -154,10 +158,12 @@ header button img {
 .main .text-content .headline {
   padding: 10px;
   letter-spacing: 0.5px;
+
 }
 
+
 .main .text-content .sub-headline {
-  padding: 10px;
+  padding: 6px 10px 12px;
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
@@ -170,7 +176,7 @@ header button img {
 
 .main .buttons {
   gap: 21px;
-  padding: 0 20px;
+  padding: 0 20px 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -486,7 +492,7 @@ section.partners .partners-logos {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 52px;
 }
 
 .testimonials h1 {
@@ -505,7 +511,7 @@ section.partners .partners-logos {
 .testimonials .testimonial {
   width: 56%;
   max-width: 322px;
-  border: 1px solid white;
+  border: 1px solid rgb(82, 82, 82);
   padding: 40px 68px 40px 40px;
   display: flex;
   flex-direction: column;
@@ -529,11 +535,13 @@ section.partners .partners-logos {
   font-size: 16px;
   line-height: 24px;
   padding: 0 10px;
+  font-weight: 500;
 }
 .testimonials .testimonial .author .occupation {
   font-size: 16px;
   line-height: 24px;
   padding: 0 10px;
+  font-weight: 500;
 }
 
 .testimonial p {
@@ -541,7 +549,7 @@ section.partners .partners-logos {
   font-weight: 400;
   text-align: left;
   line-height: 24px;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
 }
 
 /* section.cta ============================= */
@@ -831,6 +839,9 @@ footer .social-media {
     padding: 0;
     gap: 35px;
   }
+  .logo{
+    padding: 10px;
+  }
   .feature .header {
     gap: 0px;
   }
@@ -841,11 +852,15 @@ footer .social-media {
   .br {
     display: none;
   }
+
   .d-n {
     display: none;
   }
+  .d-b{
+    display: block;
+  }
   .main .text-content .sub-headline {
-    letter-spacing: 0.2px;
+    letter-spacing: 0.6px;
   }
   header {
     align-self: center;
@@ -945,18 +960,18 @@ footer .social-media {
   .card {
     padding: 40px 0;
   }
-  .card:first-child {
-    display: none;
-  }
   .card img {
     width: 80%;
   }
   .card:last-child img {
     width: 80%;
   }
-
+  .testimonials {
+    gap: 50px;
+  }
   section.testimonials .testimonial {
     padding: 40px 68px 38px 40px;
+    gap: 28px;
   }
 
   section.testimonials .testimonials-container {
@@ -1058,7 +1073,7 @@ footer .social-media {
   .images-desktop .second {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 32px;
   }
 }
 
