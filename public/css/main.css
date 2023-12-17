@@ -51,7 +51,7 @@ button {
   border: none;
   padding-block: 0;
 }
-.d-b{
+.d-b {
   display: none;
 }
 
@@ -119,6 +119,7 @@ header nav {
   gap: 10px;
 }
 header nav li a {
+  display: none;
   text-decoration: none;
   color: white;
   font-size: 17px;
@@ -137,6 +138,7 @@ header nav a:hover {
   align-items: center;
   justify-content: center;
   height: max-content;
+  z-index: 2;
 }
 
 header button img {
@@ -158,9 +160,7 @@ header button img {
 .main .text-content .headline {
   padding: 10px;
   letter-spacing: 0.5px;
-
 }
-
 
 .main .text-content .sub-headline {
   padding: 6px 10px 12px;
@@ -236,7 +236,7 @@ section.features p {
 }
 
 .features .text-content p {
-  margin-bottom: 27px;
+  margin-bottom: 30px;
 }
 .features img {
   width: 69vw;
@@ -665,6 +665,49 @@ footer .social-media {
   padding: 20px 0;
 }
 
+.btn-up {
+  position: fixed;
+  background-color: transparent;
+  right: 4%;
+  bottom: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-up::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("/public/images/up.png");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  gap: 20px;
+}
+
+.not-found h1 {
+  font-size: 128px;
+  font-weight: 500;
+}
+.not-found p {
+  font-size: 48px;
+  font-weight: 400;
+}
+
 @media (max-width: 480px) {
   .sections {
     gap: 45px;
@@ -701,6 +744,7 @@ footer .social-media {
   section.features .feature {
     padding-left: 20px;
   }
+
   section.features .text-content {
     padding: 0 10px;
     width: 45%;
@@ -716,7 +760,7 @@ footer .social-media {
     line-height: 22px;
   }
   section.features .features-list {
-    padding: 20px 90px;
+    padding: 20px 25px;
   }
   section.features .feature p {
     width: 80%;
@@ -839,8 +883,12 @@ footer .social-media {
     padding: 0;
     gap: 35px;
   }
-  .logo{
+  .logo {
     padding: 10px;
+  }
+  header nav li a {
+    display: block;
+    transform: translateX(-15px);
   }
   .feature .header {
     gap: 0px;
@@ -856,7 +904,7 @@ footer .social-media {
   .d-n {
     display: none;
   }
-  .d-b{
+  .d-b {
     display: block;
   }
   .main .text-content .sub-headline {
@@ -875,7 +923,7 @@ footer .social-media {
     opacity: 1;
     flex-direction: row;
     background-color: transparent;
-    gap: 2.8%;
+    gap: 2.5%;
     align-self: center;
   }
   header nav a {
@@ -1074,6 +1122,12 @@ footer .social-media {
     display: flex;
     flex-direction: row;
     gap: 32px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #ffffff50; /* цвет заднего фона при наведении */
   }
 }
 
